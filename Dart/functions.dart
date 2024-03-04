@@ -1,35 +1,46 @@
-//No parameter no return value
-void printname() {
-  print("My name is Braeson Nyahera");
-}
-
-//Has parameter but no return value
-void myage(int age) {
-  print("My age is $age");
-}
-
-//No parameter but has a return type
-String myname() {
-  return "Braeson";
-}
-
-//Has a parameter and a return type
-int sum(x, y) {
+int addTwo(x, y) {
   int sum = x + y;
   return sum;
 }
 
-void main() {
-  printname();
-  myage(21);
-  String name = myname();
-  print("The function name: $name");
-  int total = sum(23, 45);
-  print("The total is $total");
-  List<String> cars = ["Audi", "Toyota", "Mercedes"];
+int substractTwo(x, y) {
+  int diff = x - y;
+  return diff;
+}
 
-  //Anonymous function
-  cars.forEach((car) {
-    print(car);
-  });
+int multiplyTwo(x, y) {
+  int mult = x * y;
+  return mult;
+}
+
+double divideTwo(x, y) {
+  double div = x / y;
+  return div;
+}
+
+int stringLength(String name) {
+  int len = name.length;
+  return len;
+}
+
+String getFirstElement(String name) {
+  String first = name[0];
+  return first;
+}
+
+void main() {
+  int sum = addTwo(5, 12);
+  int diff = substractTwo(15, 7);
+  int mul = multiplyTwo(15, 3);
+  double div = divideTwo(12, 7);
+  String name = "Powerlearn";
+  int length = stringLength(name);
+  String firstelement = getFirstElement(name);
+
+  print("Sum of 5 and 12 is: $sum");
+  print("Subtraction of 7 from 15 is: $diff");
+  print("Multiplication of 15 and 3 is: $mul");
+  print("Division of 12 and 7 is: $div");
+  print("Length of [Powerlearn] is: $length");
+  print("The first letter is: $firstelement");
 }
